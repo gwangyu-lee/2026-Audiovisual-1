@@ -1,4 +1,4 @@
-# 2026-Audio-VIsual-1
+# 2026-Audiovisual-1
 
 The First Semester, 2026    
 Seoul Institute of the Arts, Ansan    
