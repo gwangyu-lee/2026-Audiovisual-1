@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Music Cognition, And Computerized Sound</title>
+<title>Sound Waves and Sine Waves</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,14 +11,8 @@
 
 <!-- Slide 1: Title -->
 <div class="slide active" id="slide1">
-  <div class="main-title">Music Cognition, And<br>Computerized Sound</div>
-  <div class="subtitle">Sound Waves and Sine Waves<br>Introduction to Pitch Perception</div>
+  <div class="main-title">Sound Waves and Sine Waves</div>
   <div class="author">Gwangyu Lee</div>
-</div>
-
-<!-- Slide 2: Section Title -->
-<div class="slide" id="slide2">
-  <div class="section-title">Sound Waves and Sine Waves</div>
 </div>
 
 <!-- Slide 3: Content with Three.js point cloud -->
@@ -868,169 +862,7 @@
   </div>
 </div>
 
-<!-- Slide 50: Section Title -->
-<div class="slide" id="slide50">
-  <div class="section-title">Introduction to<br>Pitch Perception</div>
-  <div class="section-sub">"How do we hear pitch?"</div>
-</div>
-
-<!-- Slide 51: Demo Question -->
-<div class="slide" id="slide51">
-  <div class="dq-question">Are these two sounds<br>the same pitch?</div>
-  <div class="dq-btns">
-    <button class="dq-btn" id="s51BtnA">&#9654; Sound A &mdash; Pure 440 Hz</button>
-    <button class="dq-btn" id="s51BtnB">&#9654; Sound B &mdash; Harmonics only (no 440 Hz)</button>
-  </div>
-</div>
-
-<!-- Slide 52: Definition of Pitch -->
-<div class="slide" id="slide52">
-  <div class="def-title">Pitch</div>
-  <div class="def-body">
-    <div class="def-point">A <em>perceptual</em> quality, not a physical measurement</div>
-    <div class="def-point">A machine that detects pitch must <em>match human judgments</em></div>
-    <div class="def-point">A simple frequency detector is <em>not enough</em></div>
-  </div>
-</div>
-
-<!-- Slide 53: Pitch vs Brightness -->
-<div class="slide" id="slide53">
-  <div class="pvb-title">Pitch vs Brightness</div>
-  <div class="pvb-grid">
-    <div class="pvb-col">
-      <div class="pvb-col-title">Pitch</div>
-      <div class="pvb-item"><span class="arrow">&rarr;</span> Depends on periodicity</div>
-      <div class="pvb-item"><span class="arrow">&rarr;</span> "Higher / Lower"</div>
-    </div>
-    <div class="pvb-col">
-      <div class="pvb-col-title">Brightness</div>
-      <div class="pvb-item"><span class="arrow">&rarr;</span> Depends on high-frequency energy</div>
-      <div class="pvb-item"><span class="arrow">&rarr;</span> "Brighter / Darker"</div>
-      <div class="pvb-item">Same pitch: /i/ (beet) &gt; /u/ (boot)</div>
-      <div class="pvb-item">Trumpet &gt; French Horn</div>
-    </div>
-  </div>
-  <div class="pvb-demo">
-    <button class="pvb-btn" id="s53BtnBright">&#9654; Bright (many harmonics)</button>
-    <button class="pvb-btn" id="s53BtnDark">&#9654; Dark (few harmonics)</button>
-  </div>
-</div>
-
-<!-- Slide 54: Cycles matter — Fig 5.1 -->
-<div class="slide" id="slide54">
-  <div class="cy-title">How Many Cycles to Hear Pitch?</div>
-  <div class="cy-sub">4-cycle tone burst vs 25-cycle tone burst</div>
-  <div class="cy-canvas-wrap"><canvas id="s54Canvas"></canvas></div>
-  <div class="cy-btns">
-    <button class="cy-btn" id="s54Btn4">&#9654; 4 cycles (click, no pitch)</button>
-    <button class="cy-btn" id="s54Btn25">&#9654; 25 cycles (pitch!)</button>
-  </div>
-</div>
-
-<!-- Slide 55: Missing Fundamental -->
-<div class="slide" id="slide55">
-  <div class="mf-title">Missing Fundamental</div>
-  <div class="mf-sub">Fletcher (1924): Remove f&#8320; with a filter &mdash; pitch doesn&rsquo;t change!</div>
-  <div class="mf-canvas-wrap"><canvas id="s55Canvas"></canvas></div>
-  <div class="mf-btns">
-    <button class="mf-btn" id="s55BtnFull">All Harmonics</button>
-    <button class="mf-btn accent" id="s55BtnMissing">Missing f&#8320;</button>
-    <button class="mf-btn" id="s55BtnFund">f&#8320; Only</button>
-  </div>
-  <div class="mf-conclusion">Small radio can&rsquo;t play low bass &mdash; yet you hear the pitch correctly</div>
-</div>
-
-<!-- Slide 56: Why Missing Fundamental -->
-<div class="slide" id="slide56">
-  <div class="wmf-title">Why Does the Missing Fundamental Work?</div>
-  <div class="wmf-sub">Fletcher: 3 consecutive harmonics &rarr; brain infers fundamental</div>
-  <div class="wmf-canvas-wrap"><canvas id="s56Canvas"></canvas></div>
-  <div class="wmf-btns">
-    <button class="wmf-btn" id="s56Btn234">&#9654; 880 + 1320 + 1760 Hz</button>
-    <button class="wmf-btn" id="s56Btn440">&#9654; 440 Hz pure</button>
-  </div>
-</div>
-
-<!-- Slide 57: Virtual Pitch -->
-<div class="slide" id="slide57">
-  <div class="vp-title">Virtual Pitch</div>
-  <div class="vp-sub">Terhardt (1972)</div>
-  <div class="vp-canvas-wrap"><canvas id="s57Canvas"></canvas></div>
-</div>
-
-<!-- Slide 58: Dual Mechanism — Fig 5.2 -->
-<div class="slide" id="slide58">
-  <div class="dm-title">Two Pitch Mechanisms</div>
-  <div class="dm-sub">10 harmonics: large peaks = low-freq mechanism, wiggles = high-freq mechanism</div>
-  <div class="dm-canvas-wrap"><canvas id="s58Canvas"></canvas></div>
-</div>
-
-<!-- Slide 59: Dual Mechanism Evidence — Fig 5.3+5.4 -->
-<div class="slide" id="slide59">
-  <div class="de-title">Evidence for Two Mechanisms</div>
-  <div class="de-sub">Same three waveforms, heard at two different base frequencies</div>
-  <div class="de-canvas-wrap"><canvas id="s59Canvas"></canvas></div>
-  <div class="de-btns">
-    <button class="de-btn" id="s59BtnA55">&#9654; (a) 12 harm @ 55 Hz</button>
-    <button class="de-btn" id="s59BtnB55">&#9654; (b) 6 harm @ 55 Hz</button>
-    <button class="de-btn" id="s59BtnC55">&#9654; (c) 7-12 harm @ 55 Hz</button>
-    <button class="de-btn" id="s59BtnA440">&#9654; (a) 12 harm @ 440 Hz</button>
-    <button class="de-btn" id="s59BtnB440">&#9654; (b) 6 harm @ 440 Hz</button>
-    <button class="de-btn" id="s59BtnC440">&#9654; (c) 7-12 harm @ 440 Hz</button>
-  </div>
-</div>
-
-<!-- Slide 60: Odd Harmonics — Fig 5.5 -->
-<div class="slide" id="slide60">
-  <div class="oh-title">Odd Harmonics Only</div>
-  <div class="oh-sub">Clarinet, closed organ pipes: f&#8320;, 3f&#8320;, 5f&#8320;, 7f&#8320;&hellip;</div>
-  <div class="oh-canvas-wrap"><canvas id="s60Canvas"></canvas></div>
-  <div class="oh-btns">
-    <button class="oh-btn" id="s60BtnAll">&#9654; All harmonics (440 Hz)</button>
-    <button class="oh-btn" id="s60BtnOdd">&#9654; Odd only (440 Hz)</button>
-    <button class="oh-btn" id="s60BtnAllLow">&#9654; All harmonics (55 Hz)</button>
-    <button class="oh-btn" id="s60BtnOddLow">&#9654; Odd only (55 Hz)</button>
-  </div>
-</div>
-
-<!-- Slide 61: Chimes & Bells -->
-<div class="slide" id="slide61">
-  <div class="cb-title">Chimes &amp; Bells</div>
-  <div class="cb-sub">Hemony bell partials (1644)</div>
-  <div class="cb-canvas-wrap"><canvas id="s61Canvas"></canvas></div>
-  <div class="cb-btns">
-    <button class="cb-btn" id="s61BtnChime">&#9654; Orchestra Chime</button>
-    <button class="cb-btn" id="s61BtnBell">&#9654; Hemony Bell</button>
-  </div>
-</div>
-
-<!-- Slide 62: Shepard Tone — Fig 5.6 -->
-<div class="slide" id="slide62">
-  <div class="sh-title">Shepard Tone</div>
-  <div class="sh-sub">Roger Shepard (1964): Endlessly rising pitch illusion</div>
-  <div class="sh-canvas-wrap"><canvas id="s62Canvas"></canvas></div>
-  <div class="sh-btns">
-    <button class="sh-btn" id="s62BtnUp">&#9654; Ascending</button>
-    <button class="sh-btn" id="s62BtnDown">&#9654; Descending</button>
-    <button class="sh-btn" id="s62BtnTritone">&#9654; Tritone Jump</button>
-    <button class="sh-btn" id="s62BtnStop">&#9632; Stop</button>
-  </div>
-</div>
-
-<!-- Slide 63: Risset Paradox -->
-<div class="slide" id="slide63">
-  <div class="ri-title">Risset Paradox</div>
-  <div class="ri-sub">Jean-Claude Risset: Double all frequencies &mdash; pitch goes <em>down</em></div>
-  <div class="ri-canvas-wrap"><canvas id="s63Canvas"></canvas></div>
-  <div class="ri-btns">
-    <button class="ri-btn" id="s63BtnA">&#9654; Tone A (original)</button>
-    <button class="ri-btn" id="s63BtnB">&#9654; Tone B (&times;2)</button>
-    <button class="ri-btn" id="s63BtnAB">&#9654; A → B</button>
-  </div>
-  <div class="ri-conclusion">Pitch perception is not absolute &mdash; it depends on context and partial relationships</div>
-</div>
-
-<div class="slide-indicator"><span id="currentSlide">1</span> / <span id="totalSlides">63</span></div>
+<div class="slide-indicator"><span id="currentSlide">1</span> / <span id="totalSlides">48</span></div>
 
 <script type="importmap">
 {
