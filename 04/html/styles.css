@@ -1,0 +1,3246 @@
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slide.active {
+    display: flex;
+  }
+
+  /* Slide 1 - Title */
+  #slide1 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10vw;
+  }
+
+  #slide1 .main-title {
+    font-size: clamp(48px, 7vw, 120px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  #slide1 .subtitle {
+    font-size: clamp(18px, 2.2vw, 36px);
+    font-weight: 700;
+    margin-top: 1.5vh;
+    line-height: 1.4;
+  }
+
+  #slide1 .author {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 700;
+    margin-top: 8vh;
+    letter-spacing: 0.01em;
+  }
+
+  /* Slide 2 - Section Title */
+  #slide2 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 8vw;
+  }
+
+  #slide2 .section-title {
+    font-size: clamp(48px, 7vw, 120px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  /* Slide 3 - Content */
+  #slide3 {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding-top: 6vh;
+  }
+
+  #slide3 .content-title {
+    font-size: clamp(32px, 4.5vw, 80px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    z-index: 10;
+    position: relative;
+  }
+
+  #slide3 .demo-area {
+    width: 100vw;
+    height: calc(100vh - 12vh);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #slide3 canvas.three-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide3 .wave-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 1.2vw, 20px);
+    font-weight: 700;
+    padding: 10px 32px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+
+  #slide3 .wave-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  /* Slide 4 - Longitudinal Wave */
+  #slide4 {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding-top: 5vh;
+  }
+
+  #slide4 .content-title {
+    font-size: clamp(28px, 3.5vw, 64px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    z-index: 10;
+    position: relative;
+  }
+
+  #slide4 .wave-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    flex: 1;
+    padding-top: 2vh;
+  }
+
+  #slide4 .wave-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 35vh;
+  }
+
+  #slide4 .wave-label {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 700;
+    width: 140px;
+    text-align: right;
+    padding-right: 20px;
+    flex-shrink: 0;
+  }
+
+  #slide4 .wave-canvas-wrap {
+    flex: 1;
+    height: 100%;
+  }
+
+  #slide4 canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide4 .slider-controls {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 2vh 0;
+    z-index: 10;
+  }
+
+  #slide4 .slider-controls label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 1.2vw, 20px);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #slide4 .slider-controls input[type="range"] {
+    width: 160px;
+    accent-color: #000;
+  }
+
+  /* Slide 5 - Sine Wave 3D */
+  #slide5 {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding-top: 6vh;
+  }
+
+  #slide5 .content-title {
+    font-size: clamp(32px, 4.5vw, 80px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    z-index: 10;
+    position: relative;
+  }
+
+  #slide5 .demo-area {
+    width: 100vw;
+    height: calc(100vh - 12vh);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #slide5 canvas.three-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide5 .slider-controls {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    z-index: 10;
+    background: rgba(255,255,255,0.85);
+    padding: 12px 28px;
+    border: 2px solid #000;
+  }
+
+  #slide5 .slider-controls label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 1.2vw, 20px);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #slide5 .slider-controls input[type="range"] {
+    width: 140px;
+    accent-color: #000;
+  }
+
+  #slide5 .s5-wave-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1vw, 16px);
+    font-weight: 700;
+    padding: 6px 16px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+
+  #slide5 .s5-wave-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide5 .s5-wave-btn.active {
+    background: #000;
+    color: #fff;
+  }
+
+  /* Slide 6 - Speed of Sound */
+  #slide6 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10vw;
+  }
+
+  #slide6 .content-title {
+    font-size: clamp(36px, 5vw, 90px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  #slide6 .speed-value {
+    font-size: clamp(64px, 10vw, 180px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-top: 4vh;
+    line-height: 1;
+  }
+
+  #slide6 .speed-unit {
+    font-size: clamp(20px, 2.5vw, 44px);
+    font-weight: 700;
+    color: #888;
+    margin-top: 1.5vh;
+  }
+
+  #slide6 .speed-condition {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 700;
+    color: #aaa;
+    margin-top: 4vh;
+  }
+
+  /* Slide 7 - Temperature & Speed */
+  #slide7 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 8vw;
+  }
+
+  #slide7 .temp-row {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: clamp(40px, 6vw, 120px);
+  }
+
+  #slide7 .temp-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #slide7 .temp-label {
+    font-size: clamp(18px, 2vw, 36px);
+    font-weight: 700;
+    color: #aaa;
+  }
+
+  #slide7 .temp-speed {
+    font-size: clamp(48px, 7vw, 130px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-top: 1vh;
+  }
+
+  #slide7 .temp-unit {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 700;
+    color: #888;
+    margin-top: 0.5vh;
+  }
+
+  #slide7 .why {
+    font-size: clamp(36px, 5vw, 90px);
+    font-weight: 900;
+    margin-top: 8vh;
+    letter-spacing: -0.02em;
+  }
+
+  /* Slide 8 - Molecular Motion + Pulse */
+  #slide8 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+  }
+
+  #slide8 .mol-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #slide8 .mol-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  #slide8 .mol-panel:first-child {
+    border-right: 1px solid #e0e0e0;
+  }
+
+  #slide8 .mol-label {
+    position: absolute;
+    top: 4vh;
+    z-index: 10;
+    text-align: center;
+  }
+
+  #slide8 .mol-temp {
+    font-size: clamp(28px, 3.5vw, 64px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+
+  #slide8 .mol-desc {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 700;
+    color: #888;
+    margin-top: 0.5vh;
+  }
+
+  #slide8 canvas.mol-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide8 .s9-pulse-btn {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 1.2vw, 20px);
+    font-weight: 700;
+    padding: 10px 36px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide8 .s9-pulse-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  /* Slide 9 - It's Not Wind */
+  #slide9 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+  }
+
+  #slide9 .speaker-scene {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  #slide9 canvas.speaker-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide9 .speaker-text {
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-align: center;
+  }
+
+  #slide9 .speaker-title {
+    font-size: clamp(36px, 5vw, 90px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+
+
+  /* Slide 10 - Question: Linear System */
+  #slide10 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 8vw;
+  }
+
+  #slide10 .question {
+    font-size: clamp(36px, 5vw, 90px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  #slide10 .question-sub {
+    font-size: clamp(48px, 6vw, 100px);
+    margin-top: 6vh;
+    letter-spacing: 0.3em;
+  }
+
+  /* Slide 11 - Air is Linear */
+  #slide11 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+  }
+
+  #slide11 .air-title {
+    position: absolute;
+    top: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: clamp(24px, 3vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+
+  #slide11 .air-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  #slide11 .air-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  #slide11 .air-col:first-child {
+    border-right: 1px solid #e0e0e0;
+  }
+
+  #slide11 .air-col-label {
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: clamp(20px, 2.2vw, 38px);
+    font-weight: 900;
+    text-align: center;
+  }
+
+  #slide11 canvas.air-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* Slide 12 - Linear System Diagram */
+  #slide12 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 6vw;
+  }
+
+  #slide12 .ls-title {
+    font-size: clamp(32px, 4vw, 72px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 5vh;
+  }
+
+  #slide12 .ls-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+  }
+
+  #slide12 .ls-row {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 2vw, 40px);
+  }
+
+  #slide12 .ls-input, #slide12 .ls-output {
+    font-size: clamp(18px, 2vw, 36px);
+    font-weight: 900;
+    min-width: clamp(80px, 10vw, 180px);
+    text-align: center;
+  }
+
+  #slide12 .ls-arrow {
+    font-size: clamp(20px, 2.5vw, 44px);
+    color: #aaa;
+  }
+
+  #slide12 .ls-box {
+    font-size: clamp(16px, 1.6vw, 28px);
+    font-weight: 700;
+    border: 2px solid #000;
+    padding: clamp(8px, 1vh, 16px) clamp(16px, 2vw, 40px);
+  }
+
+  #slide12 .ls-divider {
+    width: 60vw;
+    height: 2px;
+    background: #ddd;
+  }
+
+  #slide12 .ls-bottom-label {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 700;
+    color: #888;
+    margin-top: 3vh;
+    max-width: 60vw;
+    line-height: 1.5;
+  }
+
+  /* Slide 13 - Linear vs Nonlinear */
+  #slide13 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+  }
+
+  #slide13 .ln-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #slide13 .ln-input {
+    grid-row: 1 / 3;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-right: 1px solid #e0e0e0;
+  }
+
+  #slide13 .ln-output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  #slide13 .ln-output:first-of-type {
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  #slide13 .ln-label {
+    position: absolute;
+    top: 2vh;
+    z-index: 10;
+    text-align: center;
+  }
+
+  #slide13 .ln-title {
+    font-size: clamp(22px, 2.8vw, 50px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+
+  #slide13 .ln-desc {
+    font-size: clamp(11px, 1.1vw, 18px);
+    font-weight: 700;
+    color: #888;
+    margin-top: 0.3vh;
+  }
+
+  #slide12 canvas.ln-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* Slide 14 - Tam-tam Nonlinearity */
+  #slide14 {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 3vh 4vw 0;
+  }
+
+  #slide14 .tam-title {
+    font-size: clamp(24px, 3vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 2vh;
+  }
+
+  #slide14 .tam-viz {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    position: relative;
+  }
+
+  #slide14 canvas.tam-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide14 .tam-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(20px, 3vw, 50px);
+    padding: 2vh 0 3vh;
+  }
+
+  #slide14 .tam-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 1.3vw, 22px);
+    font-weight: 700;
+    padding: 10px 28px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide14 .tam-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide14 .tam-slider-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #slide14 .tam-slider-wrap label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+  }
+
+  #slide14 .tam-slider-wrap input[type="range"] {
+    width: clamp(100px, 12vw, 200px);
+    accent-color: #000;
+  }
+
+  #slide14 .tam-conclusion {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 900;
+    color: #c0392b;
+    padding-bottom: 2vh;
+  }
+
+  /* Slide 15 - Limits of Linearity */
+  #slide15 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 6vw;
+  }
+
+  #slide15 .lim-title {
+    font-size: clamp(28px, 3.5vw, 64px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 6vh;
+  }
+
+  #slide15 .lim-spectrum {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: clamp(20px, 3vw, 60px);
+    margin-bottom: 3vh;
+  }
+
+  #slide15 .lim-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vh;
+  }
+
+  #slide15 .lim-bar {
+    width: clamp(60px, 8vw, 140px);
+    border-radius: 4px;
+  }
+
+  #slide15 .lim-icon {
+    font-size: clamp(28px, 3vw, 52px);
+  }
+
+  #slide15 .lim-label {
+    font-size: clamp(16px, 1.6vw, 28px);
+    font-weight: 900;
+  }
+
+  #slide15 .lim-tag {
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+  }
+
+  #slide15 .lim-tag.linear {
+    background: #eafaf1;
+    color: #27ae60;
+  }
+
+  #slide15 .lim-tag.nonlinear {
+    background: #fef5e7;
+    color: #e67e22;
+  }
+
+  #slide15 .lim-tag.fully {
+    background: #fdedec;
+    color: #c0392b;
+  }
+
+  #slide15 .lim-note {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 700;
+    color: #aaa;
+    margin-top: 4vh;
+  }
+
+  /* Slide 16 - Pendulum Sine Wave 3D */
+  #slide16 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    position: relative;
+  }
+
+  #slide16 .pend-title {
+    position: absolute;
+    bottom: 4vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: clamp(18px, 2vw, 36px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-align: center;
+    background: rgba(255,255,255,0.85);
+    padding: 8px 24px;
+  }
+
+  #slide16 .pend-viz {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #slide16 canvas.pend-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* Slide 17 - Sine Wave Properties */
+  #slide17 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4vh 0 0;
+  }
+
+  #slide17 .sw-title {
+    font-size: clamp(24px, 3vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5vh;
+  }
+
+  #slide17 .sw-viz {
+    width: 90vw;
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide17 canvas.sw-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide17 .sw-controls {
+    display: flex;
+    gap: clamp(20px, 3vw, 50px);
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 0 3vh;
+  }
+
+  #slide17 .sw-controls label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #slide17 .sw-controls input[type="range"] {
+    width: clamp(80px, 10vw, 160px);
+    accent-color: #000;
+  }
+
+  /* Slide 18 - Sine Wave Properties Table */
+  #slide18 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 6vw;
+  }
+
+  #slide18 .tbl-title {
+    font-size: clamp(28px, 3.5vw, 64px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 5vh;
+  }
+
+  #slide18 table {
+    border-collapse: collapse;
+    font-family: 'Playfair Display', serif;
+  }
+
+  #slide18 th {
+    font-size: clamp(16px, 1.8vw, 32px);
+    font-weight: 900;
+    padding: clamp(10px, 1.5vh, 20px) clamp(20px, 3vw, 60px);
+    border-bottom: 3px solid #000;
+    text-align: left;
+  }
+
+  #slide18 td {
+    font-size: clamp(14px, 1.5vw, 26px);
+    font-weight: 700;
+    padding: clamp(8px, 1.2vh, 16px) clamp(20px, 3vw, 60px);
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+  }
+
+  #slide18 td:first-child {
+    font-weight: 900;
+  }
+
+  #slide18 td.units {
+    color: #888;
+  }
+
+  #slide18 td.desc {
+    color: #aaa;
+    font-size: clamp(12px, 1.2vw, 22px);
+  }
+
+  /* Slide 19 - Sound Pressure (Pa) */
+  #slide19 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 4vw;
+  }
+
+  #slide19 .sp-title {
+    font-size: clamp(28px, 3.5vw, 64px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 2vh;
+  }
+
+  #slide19 .sp-context {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 4vh;
+    line-height: 1.5;
+  }
+
+  #slide19 .sp-context strong {
+    color: #000;
+  }
+
+  #slide19 table {
+    border-collapse: collapse;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 3vh;
+  }
+
+  #slide19 th {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 900;
+    padding: clamp(8px, 1vh, 14px) clamp(16px, 2.5vw, 50px);
+    border-bottom: 3px solid #000;
+    text-align: left;
+  }
+
+  #slide19 td {
+    font-size: clamp(13px, 1.3vw, 22px);
+    font-weight: 700;
+    padding: clamp(6px, 0.8vh, 12px) clamp(16px, 2.5vw, 50px);
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+  }
+
+  #slide19 td.pa {
+    font-family: monospace;
+    text-align: right;
+  }
+
+  #slide19 .sp-note {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 700;
+    color: #c0392b;
+    margin-top: 2vh;
+  }
+
+  /* Slide 20 - Decibels + Log Graph */
+  #slide20 {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 3vh 4vw 0;
+  }
+
+  #slide20 .db-title {
+    font-size: clamp(24px, 3vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 1vh;
+  }
+
+  #slide20 .db-subtitle {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 2vh;
+  }
+
+  #slide20 .db-content {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    gap: 3vw;
+    align-items: flex-start;
+  }
+
+  #slide20 .db-table-wrap {
+    flex-shrink: 0;
+  }
+
+  #slide20 table {
+    border-collapse: collapse;
+    font-family: 'Playfair Display', serif;
+  }
+
+  #slide20 th {
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: 900;
+    padding: clamp(6px, 0.7vh, 10px) clamp(10px, 1.5vw, 30px);
+    border-bottom: 3px solid #000;
+    text-align: left;
+  }
+
+  #slide20 td {
+    font-size: clamp(11px, 1.1vw, 18px);
+    font-weight: 700;
+    padding: clamp(5px, 0.6vh, 8px) clamp(10px, 1.5vw, 30px);
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+  }
+
+  #slide20 td.mono {
+    font-family: monospace;
+    text-align: right;
+  }
+
+  #slide20 .db-graph-wrap {
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+  }
+
+  #slide20 canvas.db-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide20 .db-toggle-wrap {
+    position: absolute;
+    top: 2vh;
+    right: 3vw;
+    z-index: 10;
+    display: flex;
+    gap: 8px;
+  }
+
+  #slide20 .db-toggle {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1vw, 18px);
+    font-weight: 700;
+    padding: 6px 16px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide20 .db-toggle.active {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide20 .db-bottom {
+    font-size: clamp(16px, 1.8vw, 30px);
+    font-weight: 900;
+    padding: 2vh 0 3vh;
+    color: #c0392b;
+  }
+
+  /* Slide 21 - dB Formula */
+  #slide21 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 8vw;
+  }
+
+  #slide21 .db-f-title {
+    font-size: clamp(28px, 3.5vw, 64px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 5vh;
+  }
+
+  #slide21 .db-f-formula {
+    font-size: clamp(36px, 5vw, 90px);
+    font-weight: 900;
+    font-family: 'Georgia', serif;
+    margin-bottom: 4vh;
+  }
+
+  #slide21 .db-f-formula sub {
+    font-size: 0.6em;
+  }
+
+  #slide21 .db-f-where {
+    text-align: left;
+    display: inline-block;
+    font-size: clamp(16px, 1.6vw, 28px);
+    font-weight: 700;
+    color: #555;
+    line-height: 2;
+    margin-bottom: 4vh;
+  }
+
+  #slide21 .db-f-where strong {
+    color: #000;
+    font-family: 'Georgia', serif;
+  }
+
+  #slide21 .db-f-example {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 700;
+    color: #888;
+    line-height: 1.8;
+  }
+
+  #slide21 .db-f-example strong {
+    color: #000;
+  }
+
+  /* Slide 22 - Loudness Question */
+  #slide22 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 6vw;
+  }
+
+  #slide22 .lq-question {
+    font-size: clamp(24px, 3vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    margin-bottom: 6vh;
+  }
+
+  #slide22 .lq-buttons {
+    display: flex;
+    gap: clamp(30px, 5vw, 80px);
+    align-items: center;
+    justify-content: center;
+  }
+
+  #slide22 .lq-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(16px, 1.6vw, 28px);
+    font-weight: 700;
+    padding: 14px 36px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide22 .lq-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide22 .lq-btn.playing {
+    background: #000;
+    color: #fff;
+  }
+
+  /* Slide 23 - Equal Loudness Curves */
+  #slide23 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 0 0;
+  }
+
+  #slide23 .el-title {
+    font-size: clamp(24px, 3vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 1vh;
+  }
+
+  #slide23 .el-sub {
+    font-size: clamp(13px, 1.3vw, 22px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 1.5vh;
+  }
+
+  #slide23 .el-viz {
+    width: 90vw;
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide23 canvas.el-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+  }
+
+  #slide23 .el-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 1vh 0 2vh;
+  }
+
+  #slide23 .el-toggle {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1vw, 18px);
+    font-weight: 700;
+    padding: 6px 16px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide23 .el-toggle.active {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide23 .el-now-playing {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1vw, 18px);
+    font-weight: 700;
+    color: #888;
+    min-width: 120px;
+    text-align: center;
+  }
+
+  /* Slide 24 - Musical Sound = Sum of Sine Waves */
+  #slide24 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 8vw;
+  }
+
+  #slide24 .question {
+    font-size: clamp(36px, 5vw, 90px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  #slide24 .question-sub {
+    font-size: clamp(20px, 2.5vw, 44px);
+    font-weight: 700;
+    color: #888;
+    margin-top: 4vh;
+    line-height: 1.4;
+  }
+
+  /* Slide 25 - String Vibration Modes */
+  #slide25 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 0 0;
+  }
+
+  #slide25 .s25-title {
+    font-size: clamp(24px, 3vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 1vh;
+  }
+
+  #slide25 .s25-viz {
+    width: 92vw;
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide25 canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide25 .s25-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 1.5vh 0 2.5vh;
+  }
+
+  #slide25 .s25-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1vw, 18px);
+    font-weight: 700;
+    padding: 8px 20px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide25 .s25-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide25 .s25-btn.playing {
+    background: #000;
+    color: #fff;
+  }
+
+  /* Slide 26 - Frequency/Wavelength Table */
+  #slide26 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 6vw;
+  }
+
+  #slide26 .tbl-title {
+    font-size: clamp(28px, 3.5vw, 64px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 5vh;
+  }
+
+  #slide26 table {
+    border-collapse: collapse;
+    font-family: 'Playfair Display', serif;
+  }
+
+  #slide26 th {
+    font-size: clamp(16px, 1.8vw, 32px);
+    font-weight: 900;
+    padding: clamp(10px, 1.5vh, 20px) clamp(20px, 3vw, 60px);
+    border-bottom: 3px solid #000;
+    text-align: left;
+  }
+
+  #slide26 td {
+    font-size: clamp(14px, 1.5vw, 26px);
+    font-weight: 700;
+    padding: clamp(8px, 1.2vh, 16px) clamp(20px, 3vw, 60px);
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+  }
+
+  #slide26 td:first-child {
+    font-weight: 900;
+  }
+
+  /* Slide 28 - Odd vs All Harmonics */
+  #slide28 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+  }
+
+  #slide28 .s27-title {
+    font-size: clamp(24px, 3vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    padding-top: 3vh;
+    margin-bottom: 1vh;
+  }
+
+  #slide28 .s27-container {
+    display: flex;
+    width: 100vw;
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide28 .s27-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0 2vw;
+  }
+
+  #slide28 .s27-panel:first-child {
+    border-right: 1px solid #e0e0e0;
+  }
+
+  #slide28 .s27-label {
+    font-size: clamp(16px, 1.8vw, 30px);
+    font-weight: 900;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide28 .s27-sublabel {
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 1vh;
+  }
+
+  #slide28 .s27-canvas-wrap {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide27 canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide28 .s27-play-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1vw, 18px);
+    font-weight: 700;
+    padding: 8px 24px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+    margin: 1.5vh 0 2vh;
+  }
+
+  #slide28 .s27-play-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide28 .s27-play-btn.playing {
+    background: #000;
+    color: #fff;
+  }
+
+  /* Slide 27 - Fourier Synthesis */
+  #slide27 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 0 0;
+  }
+
+  #slide27 .fs-title {
+    font-size: clamp(24px, 3vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 1vh;
+  }
+
+  #slide27 .fs-body {
+    display: flex;
+    width: 94vw;
+    flex: 1;
+    min-height: 0;
+    gap: 2vw;
+  }
+
+  #slide27 .fs-canvas-wrap {
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide28 canvas.fs-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide27 .fs-table-wrap {
+    width: clamp(200px, 22vw, 360px);
+    overflow-y: auto;
+    flex-shrink: 0;
+  }
+
+  #slide27 .fs-table {
+    border-collapse: collapse;
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+  }
+
+  #slide27 .fs-table th {
+    font-size: clamp(11px, 1vw, 16px);
+    font-weight: 900;
+    padding: 4px 8px;
+    border-bottom: 2px solid #000;
+    text-align: center;
+  }
+
+  #slide27 .fs-table td {
+    font-size: clamp(10px, 0.9vw, 15px);
+    font-weight: 700;
+    padding: 3px 8px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    font-family: monospace;
+  }
+
+  #slide27 .fs-table tr.active {
+    background: rgba(0, 100, 255, 0.08);
+  }
+
+  #slide27 .fs-table tr.inactive {
+    color: #ccc;
+  }
+
+  #slide27 .fs-controls {
+    display: flex;
+    gap: clamp(12px, 2vw, 30px);
+    align-items: center;
+    justify-content: center;
+    padding: 1.5vh 0 2.5vh;
+  }
+
+  #slide27 .fs-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+    padding: 8px 24px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide27 .fs-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide27 .fs-btn.active {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide27 .fs-play-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 1.3vw, 22px);
+    font-weight: 700;
+    padding: 10px 32px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide27 .fs-play-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  /* Slide 29 - FFT Pendulum */
+  #slide29 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    position: relative;
+  }
+
+  #slide29 .fft-title {
+    position: absolute;
+    top: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: clamp(18px, 2vw, 36px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-align: center;
+    background: rgba(255,255,255,0.85);
+    padding: 8px 24px;
+  }
+
+  #slide29 .fft-btn {
+    position: absolute;
+    bottom: 4vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 1.2vw, 20px);
+    font-weight: 700;
+    padding: 10px 36px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide29 .fft-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide29 .fft-viz {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #slide29 canvas.fft-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* Slide 30 - FFT History Timeline */
+  #slide30 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 4vw;
+  }
+
+  #slide30 .tl-title {
+    font-size: clamp(24px, 3vw, 54px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 4vh;
+  }
+
+  #slide30 .tl-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 80vw;
+  }
+
+  #slide30 .tl-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: clamp(12px, 2vw, 30px);
+  }
+
+  #slide30 .tl-year {
+    font-size: clamp(20px, 2.5vw, 44px);
+    font-weight: 900;
+    width: clamp(80px, 10vw, 160px);
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  #slide30 .tl-dot-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20px;
+    flex-shrink: 0;
+  }
+
+  #slide30 .tl-dot {
+    width: clamp(12px, 1.2vw, 18px);
+    height: clamp(12px, 1.2vw, 18px);
+    border-radius: 50%;
+    background: #000;
+    flex-shrink: 0;
+  }
+
+  #slide30 .tl-line {
+    width: 2px;
+    flex: 1;
+    background: #ddd;
+    min-height: 2vh;
+  }
+
+  #slide30 .tl-content {
+    flex: 1;
+    text-align: left;
+  }
+
+  #slide30 .tl-name {
+    font-size: clamp(16px, 1.8vw, 32px);
+    font-weight: 900;
+  }
+
+  #slide30 .tl-desc {
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    margin-top: 0.3vh;
+  }
+
+  #slide30 .tl-spacer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-left: clamp(92px, 12vw, 190px);
+  }
+
+  #slide30 .tl-spacer .tl-line {
+    height: 3vh;
+  }
+
+  /* Impact section */
+  #slide30 .tl-impact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(10px, 1.5vw, 24px);
+    margin-top: 2vh;
+  }
+
+  #slide30 .tl-impact-item {
+    font-size: clamp(11px, 1.1vw, 18px);
+    font-weight: 700;
+    padding: 6px 16px;
+    border: 2px solid #000;
+    background: #fff;
+  }
+
+  #slide30 .tl-foundation {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 900;
+    margin-top: 3vh;
+    color: #c0392b;
+  }
+
+  /* Slide 31 - Fourier Winding */
+  #slide31 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2vh 3vw 0;
+  }
+
+  #slide31 .fw-title {
+    font-size: clamp(20px, 2.2vw, 40px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide31 .fw-top {
+    width: 100%;
+    height: 15%;
+    min-height: 0;
+    position: relative;
+  }
+
+  #slide31 .fw-top-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: clamp(11px, 1vw, 16px);
+    font-weight: 700;
+    color: #aaa;
+  }
+
+  #slide31 .fw-mid {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    gap: 2vw;
+  }
+
+  #slide31 .fw-wind-wrap {
+    width: 40%;
+    position: relative;
+  }
+
+  #slide31 .fw-wind-label2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: clamp(11px, 1vw, 16px);
+    font-weight: 700;
+    color: #aaa;
+  }
+
+  #slide31 .fw-graph-wrap {
+    flex: 1;
+    position: relative;
+  }
+
+  #slide31 .fw-graph-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: clamp(11px, 1vw, 16px);
+    font-weight: 700;
+    color: #aaa;
+  }
+
+  #slide31 canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide31 .fw-controls {
+    display: flex;
+    gap: clamp(10px, 1.5vw, 24px);
+    align-items: center;
+    justify-content: center;
+    padding: 1.5vh 0 2vh;
+    flex-wrap: wrap;
+  }
+
+  #slide31 .fw-freq-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1.1vw, 18px);
+    font-weight: 700;
+    padding: 6px 14px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide31 .fw-freq-btn.active {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide31 .fw-wind-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+    padding: 8px 28px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+    margin-left: 10px;
+  }
+
+  #slide31 .fw-wind-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  /* Slide 32 - DFT Visualization */
+  #slide32 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 3vw 0;
+  }
+
+  #slide32 .dft-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide32 .dft-formula {
+    font-size: clamp(16px, 1.8vw, 32px);
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+    color: #555;
+    margin-bottom: 2vh;
+  }
+
+  #slide32 .dft-body {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    gap: 2vw;
+  }
+
+  #slide32 .dft-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  #slide32 .dft-panel-label {
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide32 .dft-canvas-wrap {
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide32 canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide32 .dft-controls {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5vh 0 2.5vh;
+    flex-wrap: wrap;
+  }
+
+  #slide32 .dft-freq-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1.1vw, 18px);
+    font-weight: 700;
+    padding: 6px 14px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide32 .dft-freq-btn.active {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide32 .dft-label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1.1vw, 18px);
+    font-weight: 700;
+    color: #888;
+  }
+
+  /* Slide 33 - DFT Complexity */
+  #slide33 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 3vw 0;
+  }
+
+  #slide33 .cx-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 2vh;
+  }
+
+  #slide33 .cx-body {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    gap: 3vw;
+  }
+
+  #slide33 .cx-grid-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    align-items: center;
+  }
+
+  #slide33 .cx-grid-label {
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 1vh;
+  }
+
+  #slide33 canvas.cx-grid-canvas {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    display: block;
+  }
+
+  #slide33 .cx-chart-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  #slide33 .cx-chart-label {
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 1vh;
+  }
+
+  #slide33 canvas.cx-chart-canvas {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    display: block;
+  }
+
+  #slide33 .cx-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 2vh 0 2.5vh;
+  }
+
+  #slide33 .cx-controls label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 1.3vw, 22px);
+    font-weight: 700;
+  }
+
+  #slide33 .cx-controls input[type="range"] {
+    width: clamp(150px, 20vw, 350px);
+    accent-color: #000;
+  }
+
+  /* Slide 34 - DFT vs FFT Animation */
+  #slide34 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 2vw 0;
+  }
+
+  #slide34 .da-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 1vh;
+  }
+
+  #slide34 .da-body {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    gap: 2vw;
+  }
+
+  #slide34 .da-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    align-items: center;
+  }
+
+  #slide34 .da-panel-label {
+    font-size: clamp(16px, 1.6vw, 28px);
+    font-weight: 900;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide34 .da-panel-sub {
+    font-size: clamp(11px, 1vw, 16px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 1vh;
+  }
+
+  #slide34 .da-canvas-wrap {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide34 canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide34 .da-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 1.5vh 0 2.5vh;
+  }
+
+  #slide34 .da-play-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 1.3vw, 22px);
+    font-weight: 700;
+    padding: 10px 36px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide34 .da-play-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide34 .da-counter {
+    font-family: monospace;
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    min-width: 200px;
+  }
+
+  /* Slide 35 - Gibbs Phenomenon */
+  #slide35 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 3vw 0;
+  }
+
+  #slide35 .gb-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide35 .gb-sub {
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 1.5vh;
+  }
+
+  #slide35 .gb-viz {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide35 canvas.gb-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide35 .gb-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 2vh 0 2.5vh;
+  }
+
+  #slide35 .gb-controls label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 1.3vw, 22px);
+    font-weight: 700;
+  }
+
+  #slide35 .gb-controls input[type="range"] {
+    width: clamp(200px, 25vw, 400px);
+    accent-color: #000;
+  }
+
+  /* Slide 36 - Gibbs in Digital Audio */
+  #slide36 {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 3vh 3vw 0;
+  }
+
+  #slide36 .da-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide36 .da-sub {
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 1.5vh;
+  }
+
+  #slide36 .da-viz {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide36 canvas.da-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide36 .da-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(16px, 2vw, 40px);
+    padding: 2vh 0 2.5vh;
+  }
+
+  #slide36 .da-controls label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 1.3vw, 22px);
+    font-weight: 700;
+  }
+
+  #slide36 .da-controls input[type="range"] {
+    width: clamp(150px, 20vw, 350px);
+    accent-color: #000;
+  }
+
+  #slide36 .da-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+    padding: 8px 24px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide36 .da-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  /* Slide 37 - The Solution: Windowed Filters */
+  #slide37 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 2vw 0;
+  }
+
+  #slide37 .wf-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5vh;
+  }
+
+  #slide37 .wf-container {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    gap: 2px;
+  }
+
+  #slide37 .wf-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  #slide37 .wf-panel:first-child {
+    border-right: 1px solid #e0e0e0;
+  }
+
+  #slide37 .wf-label {
+    font-size: clamp(16px, 1.6vw, 28px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide37 canvas.wf-canvas {
+    width: 100%;
+    flex: 1;
+    display: block;
+  }
+
+  #slide37 .wf-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(16px, 2vw, 40px);
+    padding: 1.5vh 0 1vh;
+    width: 100%;
+  }
+
+  #slide37 .wf-controls label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 1.3vw, 22px);
+    font-weight: 700;
+  }
+
+  #slide37 .wf-controls input[type="range"] {
+    width: clamp(150px, 20vw, 350px);
+    accent-color: #000;
+  }
+
+  #slide37 .wf-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+    padding: 8px 24px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide37 .wf-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide37 .wf-conclusion {
+    font-size: clamp(13px, 1.3vw, 22px);
+    font-weight: 900;
+    color: #555;
+    padding-bottom: 2vh;
+    text-align: center;
+  }
+
+  /* Slide 38 - Oversampling */
+  #slide38 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 3vw 0;
+  }
+
+  #slide38 .os-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide38 .os-sub {
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 1.5vh;
+  }
+
+  #slide38 .os-body {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    gap: 2vw;
+  }
+
+  #slide38 .os-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  #slide38 .os-panel-label {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 900;
+    margin-bottom: 0.5vh;
+    text-align: center;
+  }
+
+  #slide38 .os-panel-sub {
+    font-size: clamp(11px, 1vw, 16px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 0.5vh;
+    text-align: center;
+  }
+
+  #slide38 .os-canvas-wrap {
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide38 canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide38 .os-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 1.5vh 0 2.5vh;
+  }
+
+  #slide38 .os-controls label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+  }
+
+  #slide38 .os-controls input[type="range"] {
+    width: clamp(150px, 20vw, 300px);
+    accent-color: #000;
+  }
+
+  /* Slide 39 - Phase Effect on Waveform */
+  #slide39 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 3vw 0;
+  }
+
+  #slide39 .ph-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide39 .ph-sub {
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 1.5vh;
+  }
+
+  #slide39 .ph-rows {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  #slide39 .ph-row {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-height: 0;
+  }
+
+  #slide39 .ph-row-label {
+    width: clamp(100px, 12vw, 200px);
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: 700;
+    text-align: right;
+    padding-right: 1.5vw;
+    flex-shrink: 0;
+    line-height: 1.3;
+  }
+
+  #slide39 .ph-row-label small {
+    display: block;
+    color: #aaa;
+    font-size: 0.85em;
+  }
+
+  #slide39 .ph-canvas-wrap {
+    flex: 1;
+    height: 100%;
+    min-height: 0;
+  }
+
+  #slide39 canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide39 .ph-play-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(11px, 1vw, 16px);
+    font-weight: 700;
+    padding: 5px 14px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: 1vw;
+    transition: all 0.15s;
+  }
+
+  #slide39 .ph-play-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide39 .ph-note {
+    font-size: clamp(11px, 1vw, 16px);
+    font-weight: 700;
+    color: #aaa;
+    text-align: center;
+    padding: 1vh 0 2vh;
+  }
+
+  /* Slide 40 - Phase Breakdown */
+  #slide40 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2vh 2vw 0;
+  }
+
+  #slide40 .pb-title {
+    font-size: clamp(20px, 2.2vw, 40px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 1vh;
+  }
+
+  #slide40 .pb-body {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    gap: 2vw;
+  }
+
+  #slide40 .pb-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  #slide40 .pb-col-label {
+    font-size: clamp(14px, 1.4vw, 24px);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide40 .pb-col-sub {
+    font-size: clamp(10px, 0.9vw, 16px);
+    font-weight: 700;
+    color: #888;
+    text-align: center;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide40 .pb-canvas-wrap {
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide40 canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide40 .pb-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 1vh 0 2vh;
+  }
+
+  #slide40 .pb-controls label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1.1vw, 18px);
+    font-weight: 700;
+  }
+
+  #slide40 .pb-controls input[type="range"] {
+    width: clamp(120px, 16vw, 260px);
+    accent-color: #000;
+  }
+
+  /* Slide 42 - Waterfall Spectrum */
+  #slide42 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 3vw 0;
+  }
+
+  #slide42 .wf-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 1vh;
+  }
+
+  #slide42 .wf-body {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide42 canvas.wf-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide42 .wf-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(16px, 2vw, 30px);
+    padding: 1.5vh 0 2.5vh;
+    flex-wrap: wrap;
+  }
+
+  #slide42 .wf-controls label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1.1vw, 18px);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #slide42 .wf-controls input[type="range"] {
+    width: clamp(80px, 10vw, 160px);
+    accent-color: #000;
+  }
+
+  #slide42 .wf-play-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+    padding: 8px 28px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide42 .wf-play-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  /* Slide 43 - Spectrogram */
+  #slide43 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 3vw 0;
+  }
+
+  #slide43 .sg-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide43 .sg-sub {
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 1vh;
+  }
+
+  #slide43 .sg-body {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide43 canvas.sg-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide43 .sg-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 1.5vh 0 2.5vh;
+  }
+
+  #slide43 .sg-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+    padding: 8px 28px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide43 .sg-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide43 .sg-status {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1.1vw, 18px);
+    font-weight: 700;
+    color: #888;
+  }
+
+  /* Slide 44 - Windowing */
+  #slide44 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 3vw 0;
+  }
+
+  #slide44 .win-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide44 .win-sub {
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 1vh;
+  }
+
+  #slide44 .win-body {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide44 canvas.win-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide44 .win-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 1.5vh 0 2.5vh;
+    flex-wrap: wrap;
+  }
+
+  #slide44 .win-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 1.2vw, 20px);
+    font-weight: 700;
+    padding: 8px 28px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide44 .win-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide44 .win-btn.active {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide44 .win-controls label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1.1vw, 18px);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #slide44 .win-controls input[type="range"] {
+    width: 140px;
+    accent-color: #000;
+  }
+
+  /* Slide 45 - Sampling & Aliasing */
+  #slide45 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 3vw 0;
+  }
+
+  #slide45 .sa-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5vh;
+  }
+
+  #slide45 .sa-sub {
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 1vh;
+  }
+
+  #slide45 .sa-body {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+  }
+
+  #slide45 canvas.sa-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #slide45 .sa-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 1.5vh 0 2.5vh;
+    flex-wrap: wrap;
+  }
+
+  #slide45 .sa-freq-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(11px, 1vw, 16px);
+    font-weight: 700;
+    padding: 6px 12px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  #slide45 .sa-freq-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide45 .sa-freq-btn.active {
+    background: #000;
+    color: #fff;
+  }
+
+  #slide45 .sa-freq-btn.aliased-btn {
+    border-color: #c00;
+    color: #c00;
+  }
+
+  #slide45 .sa-freq-btn.aliased-btn.active {
+    background: #c00;
+    color: #fff;
+    border-color: #c00;
+  }
+
+  #slide45 .sa-status {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1.1vw, 18px);
+    font-weight: 700;
+    color: #888;
+  }
+
+  #slide45 .sa-status.aliased {
+    color: #c00;
+  }
+
+  /* Slide 46: Filter Bank */
+  #slide46 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4vh 3vw 0;
+  }
+  #slide46 .fb-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5vh;
+  }
+  #slide46 .fb-sub {
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 2vh;
+  }
+  #slide46 .fb-canvas-wrap {
+    width: 88vw;
+    flex: 1;
+    min-height: 0;
+  }
+  #slide46 canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  #slide46 .fb-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 2vh 0 2.5vh;
+  }
+  #slide46 .fb-controls label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1.1vw, 18px);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  #slide46 .fb-controls input[type="range"] {
+    width: clamp(100px, 15vw, 260px);
+    cursor: pointer;
+  }
+
+  /* Slide 47: Phase Vocoder */
+  #slide47 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3vh 3vw 0;
+  }
+  #slide47 .pv-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 1vh;
+  }
+  #slide47 .pv-split {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    gap: 2vw;
+    padding-bottom: 2vh;
+  }
+  #slide47 .pv-left, #slide47 .pv-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #slide47 .pv-label {
+    font-size: clamp(14px, 1.3vw, 22px);
+    font-weight: 700;
+    margin-bottom: 1vh;
+  }
+  #slide47 canvas.pv-canvas {
+    width: 100%;
+    flex: 1;
+    display: block;
+  }
+  #slide47 .pv-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1vh 0;
+    width: 100%;
+  }
+  #slide47 .pv-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(12px, 1.1vw, 18px);
+    font-weight: 700;
+    padding: 8px 20px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  #slide47 .pv-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+  #slide47 .pv-demo label {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(11px, 1vw, 16px);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  #slide47 .pv-demo input[type="range"] {
+    width: clamp(80px, 12vw, 200px);
+    cursor: pointer;
+  }
+  #slide47 .pv-note {
+    font-size: clamp(11px, 0.9vw, 15px);
+    font-weight: 700;
+    color: #888;
+  }
+
+  /* Slide 48: Time Stretching — Phase Correction */
+  #slide48 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4vh 3vw 2vh;
+  }
+  #slide48 .ts-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5vh;
+  }
+  #slide48 .ts-sub {
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 1.5vh;
+  }
+  #slide48 .ts-canvas-wrap {
+    width: 88vw;
+    flex: 1;
+    min-height: 0;
+  }
+  #slide48 canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* Slide 49: Wavelet vs Fourier */
+  #slide49 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4vh 3vw 3vh;
+  }
+  #slide49 .s49-title {
+    font-size: clamp(22px, 2.5vw, 46px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 2vh;
+  }
+  #slide49 .s49-container {
+    display: flex;
+    width: 88vw;
+    gap: 3vw;
+    flex: 1;
+    min-height: 0;
+  }
+  #slide49 .s49-panel {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  #slide49 .s49-panel-title {
+    font-size: clamp(16px, 1.6vw, 28px);
+    font-weight: 900;
+    margin-bottom: 0.5vh;
+  }
+  #slide49 .s49-panel-desc {
+    font-size: clamp(11px, 1vw, 16px);
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 1vh;
+  }
+  #slide49 .s49-canvas-wrap {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+  }
+  #slide49 canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* ── Section 5: Pitch Perception (Slides 50–63) ── */
+
+  /* Slide 50: Section Title */
+  #slide50 { justify-content:center; align-items:center; text-align:center; padding:0 8vw; }
+  #slide50 .section-title { font-size:clamp(48px,7vw,120px); font-weight:900; line-height:1.05; letter-spacing:-0.02em; }
+  #slide50 .section-sub { font-size:clamp(16px,2vw,32px); font-weight:700; color:#888; margin-top:2vh; }
+
+  /* Slide 51: Demo Question */
+  #slide51 { justify-content:center; align-items:center; text-align:center; padding:0 6vw; }
+  #slide51 .dq-question { font-size:clamp(28px,4vw,72px); font-weight:900; letter-spacing:-0.02em; margin-bottom:4vh; }
+  #slide51 .dq-btns { display:flex; gap:clamp(12px,2vw,30px); justify-content:center; flex-wrap:wrap; margin-bottom:3vh; }
+  #slide51 .dq-btn { font-family:'Playfair Display',serif; font-size:clamp(13px,1.2vw,20px); font-weight:700; padding:12px 28px; border:2px solid #000; background:#fff; color:#000; cursor:pointer; transition:all .15s; }
+  #slide51 .dq-btn:hover, #slide51 .dq-btn.playing { background:#000; color:#fff; }
+
+  /* Slide 52: Definition */
+  #slide52 { justify-content:center; align-items:center; text-align:center; padding:0 8vw; }
+  #slide52 .def-title { font-size:clamp(32px,4.5vw,80px); font-weight:900; margin-bottom:4vh; }
+  #slide52 .def-body { max-width:70vw; }
+  #slide52 .def-point { font-size:clamp(16px,1.8vw,30px); font-weight:700; margin-bottom:2vh; line-height:1.5; }
+  #slide52 .def-point em { color:#c0392b; font-style:normal; }
+
+  /* Slide 53: Pitch vs Brightness */
+  #slide53 { justify-content:flex-start; align-items:center; padding:4vh 3vw 2vh; }
+  #slide53 .pvb-title { font-size:clamp(24px,3vw,54px); font-weight:900; letter-spacing:-0.02em; margin-bottom:2vh; }
+  #slide53 .pvb-grid { display:grid; grid-template-columns:1fr 1fr; gap:3vw; width:84vw; flex:1; min-height:0; }
+  #slide53 .pvb-col { display:flex; flex-direction:column; }
+  #slide53 .pvb-col-title { font-size:clamp(18px,2vw,34px); font-weight:900; margin-bottom:1vh; text-align:center; }
+  #slide53 .pvb-item { font-size:clamp(13px,1.2vw,20px); font-weight:700; margin-bottom:1vh; line-height:1.5; }
+  #slide53 .pvb-item .arrow { color:#c0392b; }
+  #slide53 .pvb-demo { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; padding:2vh 0 2.5vh; }
+  #slide53 .pvb-btn { font-family:'Playfair Display',serif; font-size:clamp(11px,1vw,16px); font-weight:700; padding:8px 18px; border:2px solid #000; background:#fff; color:#000; cursor:pointer; transition:all .15s; }
+  #slide53 .pvb-btn:hover, #slide53 .pvb-btn.playing { background:#000; color:#fff; }
+
+  /* Slide 54: Cycles → Fig 5.1 */
+  #slide54 { justify-content:flex-start; align-items:center; padding:4vh 3vw 2vh; }
+  #slide54 .cy-title { font-size:clamp(24px,3vw,54px); font-weight:900; letter-spacing:-0.02em; margin-bottom:0.5vh; }
+  #slide54 .cy-sub { font-size:clamp(12px,1.2vw,20px); font-weight:700; color:#888; margin-bottom:2vh; }
+  #slide54 .cy-canvas-wrap { width:88vw; flex:1; min-height:0; }
+  #slide54 canvas { width:100%; height:100%; display:block; }
+  #slide54 .cy-btns { display:flex; gap:clamp(10px,2vw,24px); justify-content:center; padding:2vh 0 2.5vh; }
+  #slide54 .cy-btn { font-family:'Playfair Display',serif; font-size:clamp(12px,1.1vw,18px); font-weight:700; padding:10px 24px; border:2px solid #000; background:#fff; color:#000; cursor:pointer; transition:all .15s; }
+  #slide54 .cy-btn:hover, #slide54 .cy-btn.playing { background:#000; color:#fff; }
+
+  /* Slide 55: Missing Fundamental */
+  #slide55 { justify-content:flex-start; align-items:center; padding:4vh 3vw 2vh; }
+  #slide55 .mf-title { font-size:clamp(24px,3vw,54px); font-weight:900; letter-spacing:-0.02em; margin-bottom:0.5vh; }
+  #slide55 .mf-sub { font-size:clamp(12px,1.2vw,20px); font-weight:700; color:#888; margin-bottom:2vh; text-align:center; max-width:80vw; }
+  #slide55 .mf-canvas-wrap { width:88vw; flex:1; min-height:0; }
+  #slide55 canvas { width:100%; height:100%; display:block; }
+  #slide55 .mf-btns { display:flex; gap:clamp(8px,1.5vw,20px); justify-content:center; padding:2vh 0 1vh; flex-wrap:wrap; }
+  #slide55 .mf-btn { font-family:'Playfair Display',serif; font-size:clamp(11px,1vw,16px); font-weight:700; padding:8px 18px; border:2px solid #000; background:#fff; color:#000; cursor:pointer; transition:all .15s; }
+  #slide55 .mf-btn:hover, #slide55 .mf-btn.playing { background:#000; color:#fff; }
+  #slide55 .mf-btn.accent { border-color:#c0392b; color:#c0392b; }
+  #slide55 .mf-btn.accent:hover, #slide55 .mf-btn.accent.playing { background:#c0392b; color:#fff; }
+  #slide55 .mf-conclusion { font-size:clamp(13px,1.3vw,22px); font-weight:900; color:#c0392b; padding-bottom:1.5vh; text-align:center; }
+
+  /* Slide 56: Why Missing Fundamental */
+  #slide56 { justify-content:flex-start; align-items:center; padding:4vh 3vw 2vh; }
+  #slide56 .wmf-title { font-size:clamp(24px,3vw,54px); font-weight:900; letter-spacing:-0.02em; margin-bottom:0.5vh; }
+  #slide56 .wmf-sub { font-size:clamp(12px,1.2vw,20px); font-weight:700; color:#888; margin-bottom:2vh; text-align:center; }
+  #slide56 .wmf-canvas-wrap { width:88vw; flex:1; min-height:0; }
+  #slide56 canvas { width:100%; height:100%; display:block; }
+  #slide56 .wmf-btns { display:flex; gap:clamp(8px,1.5vw,20px); justify-content:center; padding:2vh 0 2.5vh; flex-wrap:wrap; }
+  #slide56 .wmf-btn { font-family:'Playfair Display',serif; font-size:clamp(11px,1vw,16px); font-weight:700; padding:8px 18px; border:2px solid #000; background:#fff; color:#000; cursor:pointer; transition:all .15s; }
+  #slide56 .wmf-btn:hover, #slide56 .wmf-btn.playing { background:#000; color:#fff; }
+
+  /* Slide 57: Virtual Pitch (Terhardt) */
+  #slide57 { justify-content:flex-start; align-items:center; padding:4vh 3vw 2vh; }
+  #slide57 .vp-title { font-size:clamp(24px,3vw,54px); font-weight:900; letter-spacing:-0.02em; margin-bottom:0.5vh; }
+  #slide57 .vp-sub { font-size:clamp(12px,1.2vw,20px); font-weight:700; color:#888; margin-bottom:2vh; }
+  #slide57 .vp-canvas-wrap { width:88vw; flex:1; min-height:0; }
+  #slide57 canvas { width:100%; height:100%; display:block; }
+
+  /* Slide 58: Dual Mechanism — Fig 5.2 */
+  #slide58 { justify-content:flex-start; align-items:center; padding:4vh 3vw 2vh; }
+  #slide58 .dm-title { font-size:clamp(24px,3vw,54px); font-weight:900; letter-spacing:-0.02em; margin-bottom:0.5vh; }
+  #slide58 .dm-sub { font-size:clamp(12px,1.2vw,20px); font-weight:700; color:#888; margin-bottom:2vh; text-align:center; max-width:80vw; }
+  #slide58 .dm-canvas-wrap { width:88vw; flex:1; min-height:0; }
+  #slide58 canvas { width:100%; height:100%; display:block; }
+  #slide58 .dm-btns { display:flex; gap:clamp(8px,1.5vw,20px); justify-content:center; padding:2vh 0 2.5vh; flex-wrap:wrap; }
+  #slide58 .dm-btn { font-family:'Playfair Display',serif; font-size:clamp(11px,1vw,16px); font-weight:700; padding:8px 18px; border:2px solid #000; background:#fff; color:#000; cursor:pointer; transition:all .15s; }
+  #slide58 .dm-btn:hover, #slide58 .dm-btn.playing { background:#000; color:#fff; }
+
+  /* Slide 59: Dual Mechanism Evidence — Fig 5.3+5.4 */
+  #slide59 { justify-content:flex-start; align-items:center; padding:4vh 3vw 2vh; }
+  #slide59 .de-title { font-size:clamp(24px,3vw,54px); font-weight:900; letter-spacing:-0.02em; margin-bottom:0.5vh; }
+  #slide59 .de-sub { font-size:clamp(12px,1.2vw,20px); font-weight:700; color:#888; margin-bottom:2vh; text-align:center; max-width:80vw; }
+  #slide59 .de-canvas-wrap { width:88vw; flex:1; min-height:0; }
+  #slide59 canvas { width:100%; height:100%; display:block; }
+  #slide59 .de-btns { display:flex; gap:clamp(6px,1vw,14px); justify-content:center; padding:1.5vh 0 2vh; flex-wrap:wrap; }
+  #slide59 .de-btn { font-family:'Playfair Display',serif; font-size:clamp(10px,0.9vw,15px); font-weight:700; padding:7px 14px; border:2px solid #000; background:#fff; color:#000; cursor:pointer; transition:all .15s; }
+  #slide59 .de-btn:hover, #slide59 .de-btn.playing { background:#000; color:#fff; }
+
+  /* Slide 60: Odd Harmonics — Fig 5.5 */
+  #slide60 { justify-content:flex-start; align-items:center; padding:4vh 3vw 2vh; }
+  #slide60 .oh-title { font-size:clamp(24px,3vw,54px); font-weight:900; letter-spacing:-0.02em; margin-bottom:0.5vh; }
+  #slide60 .oh-sub { font-size:clamp(12px,1.2vw,20px); font-weight:700; color:#888; margin-bottom:2vh; text-align:center; max-width:80vw; }
+  #slide60 .oh-canvas-wrap { width:88vw; flex:1; min-height:0; }
+  #slide60 canvas { width:100%; height:100%; display:block; }
+  #slide60 .oh-btns { display:flex; gap:clamp(8px,1.5vw,20px); justify-content:center; padding:2vh 0 2.5vh; flex-wrap:wrap; }
+  #slide60 .oh-btn { font-family:'Playfair Display',serif; font-size:clamp(11px,1vw,16px); font-weight:700; padding:8px 18px; border:2px solid #000; background:#fff; color:#000; cursor:pointer; transition:all .15s; }
+  #slide60 .oh-btn:hover, #slide60 .oh-btn.playing { background:#000; color:#fff; }
+
+  /* Slide 61: Chimes & Bells */
+  #slide61 { justify-content:flex-start; align-items:center; padding:4vh 3vw 2vh; }
+  #slide61 .cb-title { font-size:clamp(24px,3vw,54px); font-weight:900; letter-spacing:-0.02em; margin-bottom:0.5vh; }
+  #slide61 .cb-sub { font-size:clamp(12px,1.2vw,20px); font-weight:700; color:#888; margin-bottom:2vh; }
+  #slide61 .cb-canvas-wrap { width:88vw; flex:1; min-height:0; }
+  #slide61 canvas { width:100%; height:100%; display:block; }
+  #slide61 .cb-btns { display:flex; gap:clamp(8px,1.5vw,20px); justify-content:center; padding:2vh 0 2.5vh; flex-wrap:wrap; }
+  #slide61 .cb-btn { font-family:'Playfair Display',serif; font-size:clamp(11px,1vw,16px); font-weight:700; padding:8px 18px; border:2px solid #000; background:#fff; color:#000; cursor:pointer; transition:all .15s; }
+  #slide61 .cb-btn:hover, #slide61 .cb-btn.playing { background:#000; color:#fff; }
+
+  /* Slide 62: Shepard Tone — Fig 5.6 */
+  #slide62 { justify-content:flex-start; align-items:center; padding:4vh 3vw 2vh; }
+  #slide62 .sh-title { font-size:clamp(24px,3vw,54px); font-weight:900; letter-spacing:-0.02em; margin-bottom:0.5vh; }
+  #slide62 .sh-sub { font-size:clamp(12px,1.2vw,20px); font-weight:700; color:#888; margin-bottom:2vh; text-align:center; max-width:80vw; }
+  #slide62 .sh-canvas-wrap { width:88vw; flex:1; min-height:0; }
+  #slide62 canvas { width:100%; height:100%; display:block; }
+  #slide62 .sh-btns { display:flex; gap:clamp(8px,1.5vw,20px); justify-content:center; padding:2vh 0 2.5vh; flex-wrap:wrap; }
+  #slide62 .sh-btn { font-family:'Playfair Display',serif; font-size:clamp(11px,1vw,16px); font-weight:700; padding:8px 18px; border:2px solid #000; background:#fff; color:#000; cursor:pointer; transition:all .15s; }
+  #slide62 .sh-btn:hover, #slide62 .sh-btn.active { background:#000; color:#fff; }
+
+  /* Slide 63: Risset Paradox */
+  #slide63 { justify-content:flex-start; align-items:center; padding:4vh 3vw 2vh; }
+  #slide63 .ri-title { font-size:clamp(24px,3vw,54px); font-weight:900; letter-spacing:-0.02em; margin-bottom:0.5vh; }
+  #slide63 .ri-sub { font-size:clamp(12px,1.2vw,20px); font-weight:700; color:#888; margin-bottom:2vh; text-align:center; max-width:80vw; }
+  #slide63 .ri-canvas-wrap { width:88vw; flex:1; min-height:0; }
+  #slide63 canvas { width:100%; height:100%; display:block; }
+  #slide63 .ri-btns { display:flex; gap:clamp(8px,1.5vw,20px); justify-content:center; padding:2vh 0 2.5vh; flex-wrap:wrap; }
+  #slide63 .ri-btn { font-family:'Playfair Display',serif; font-size:clamp(11px,1vw,16px); font-weight:700; padding:8px 18px; border:2px solid #000; background:#fff; color:#000; cursor:pointer; transition:all .15s; }
+  #slide63 .ri-btn:hover, #slide63 .ri-btn.active { background:#000; color:#fff; }
+  #slide63 .ri-conclusion { font-size:clamp(13px,1.3vw,22px); font-weight:900; color:#c0392b; padding-bottom:1.5vh; text-align:center; }
+
+  /* Slide indicator */
+  .slide-indicator {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #aaa;
+    z-index: 100;
+  }
